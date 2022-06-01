@@ -29,6 +29,12 @@
     
 }
 
+a:link{
+    text-decoration: none;
+    color: #e42a2a;
+    font-weight: bolder;
+}
+
 /* formato del pie */  
 .pie{
     margin-left: 50px;
@@ -38,11 +44,9 @@
 }
 
 body {
-  height: 1350px;
-  
-  background-image: url("img1/crema.jpg");
-  background-size: cover;
-  background-repeat:no-repeat;
-  background-position: center center;
-    
-  }
+    height: 1350px;
+    background-image: url("img1/crema.jpg");
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position: center center;
+}
