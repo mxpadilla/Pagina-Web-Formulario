@@ -1,0 +1,74 @@
+header{
+    background-image: url("img1/crema.jpg");
+    padding: 30px;
+}
+h1{
+    color: rgb(255, 255, 255);
+    font-family: arial;
+    font-size: 50px;
+}
+body{
+    width: 1300px;
+    margin: 0px auto;
+    background: rgb(255, 255, 255);
+ 
+}
+
+
+
+h1{
+    color: black;
+    text-align: center;
+    font-family: 'arial';
+}
+
+.contenido{
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgb(255, 255, 255);
+    padding: 130px;
+    border-radius: 5px;
+    border-top: 1px solid rgb(0, 0, 0);
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+}
+
+.form-label{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.form-control{
+    border-radius: 2px;
+}
+
+a{
+    color: orange;
+    text-decoration: none;
+}
+
+.enviar{
+    padding: 4px;
+    border-radius: 1px;
+    border-style: groove;
+}
+body {
+    height: 900px;
+    
+    background-image: url("img1/crema.jpg");
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position: center center;
+      
+    }
+
+
+
+    .titulo{
+        font-family: sans-serif;
+        text-align: center;
+        padding: 38px;
+        font-style: italic;
+        color: #5e411e;
+    }
