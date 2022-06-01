@@ -3,7 +3,11 @@ function validar()
     var rut = document.formulario.txt_rut.value
     var telefono = document.formulario.txt_telefono.value
     var direccion = document.formulario.txt_direccion.value
+    var chocolate = document.getElementById("opt_tipo")
+    var detalle = document.formulario.txa_pedido.value
+    var pedido = document.getElementById("rbt_delivery")
 
+    //validar rut
     if(rut.length == 0)
     {
         alert("Debe ingresar un rut")
@@ -16,23 +20,41 @@ function validar()
         document.formulario.txt_rut.focus()
         return false
     }
-    //else if (rut) <- guion verificador
+    else if (rut.substr(-2,1) != "-")
+    {
+        alert("Debe colocar el digito verificador")
+        document.formulario.txt_rut.focus()
+        return false
+    }
 
-
+    //validar telefono
     if(telefono.length == 0)
     {
         alert("Debe ingresar un telefono")
         document.formulario.txt_telefono.focus()
         return false
     }
-    //else if(telefono) <- que empiece con 9
+    else if(telefono.charAt(0) != 9)
+    {
+        alert("El telefono debe empezar con 9")
+        document.formulario.txt_telefono.focus()
+        return false
+    }
     else if(telefono.length != 9)
     {
         alert("El telefono debe tener 9 caracteres como máximo")
         document.formulario.txt_telefono.focus()
         return false
     }
+    else if(telefono.indexOf("+") >= 0 || telefono.indexOf("-") >= 0)
+    {
+        alert('El telefono no debe tener "+" o "-"')
+        document.formulario.txt_telefono.focus()
+        return false
+    }
     
+
+    //validar dirección
     if(direccion.length == 0 || direccion.length < 3)
     {
         alert("Ingrese una dirección valida")
@@ -40,4 +62,30 @@ function validar()
         return false
     }
 
+
+    //validar selección
+    if(chocolate.value == 0)
+    {
+        alert("Selecione una opcion valida")
+        document.formulario.opt_tipo.focus()
+        return false
+    }
+    else
+    {
+        //busca la ID del Select correspondiente y lo transforma a texto
+        choco_opt = chocolate.options[chocolate.selectedIndex].text
+    }
+
+    //validar detalle del pedido
+    if(detalle.length == 0)
+    {
+        detalle = "Sin detalle."
+    }
+
+    //validar elección delivery
+
+    alert("Pedido correctamente recibido")
+    confirmacion = "RUT cliente            : "+rut+"\nTelefono                : "+telefono+
+    "\nDirección               : "+direccion+"\nChocolate elegido: "+choco_opt+"\nDetalle                  : "+detalle
+    alert(confirmacion)
 }
