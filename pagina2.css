@@ -14,8 +14,6 @@ body{
  
 }
 
-
-
 h1{
     color: black;
     text-align: center;
@@ -23,11 +21,8 @@ h1{
 }
 
 .contenido{
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
     background: rgb(255, 255, 255);
-    padding: 130px;
+    padding: 25px;
     border-radius: 5px;
     border-top: 1px solid rgb(0, 0, 0);
     border-right: 1px solid black;
@@ -40,7 +35,7 @@ h1{
 }
 
 .form-control{
-    border-radius: 2px;
+    border-radius: 7px;
 }
 
 a{
@@ -53,7 +48,7 @@ a{
     border-radius: 1px;
     border-style: groove;
 }
-body {
+body{
     height: 900px;
     
     background-image: url("img1/crema.jpg");
@@ -61,14 +56,12 @@ body {
     background-repeat:no-repeat;
     background-position: center center;
       
-    }
+}
 
-
-
-    .titulo{
-        font-family: sans-serif;
-        text-align: center;
-        padding: 38px;
-        font-style: italic;
-        color: #5e411e;
-    }
+.titulo{
+    font-family: sans-serif;
+    text-align: center;
+    padding: 38px;
+    font-style: italic;
+    color: #5e411e;
+}
