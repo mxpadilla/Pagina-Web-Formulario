@@ -5,7 +5,7 @@ function validar()
     var direccion = document.formulario.txt_direccion.value
     var chocolate = document.getElementById("opt_tipo")
     var detalle = document.formulario.txa_pedido.value
-    var pedido = document.getElementById("rbt_delivery")
+    var pedido = document.formulario.rbt_delivery
 
     //validar rut
     if(rut.length == 0)
@@ -83,9 +83,19 @@ function validar()
     }
 
     //validar elección delivery
+    if(pedido[0].checked == true || pedido[1].checked == true)
+    { 
+        pedido = pedido.value
+    }
+    else
+    {
+        alert("Seleccione una opcion")
+        return false
+    }
 
+    //mensaje de confirmación del pedido
     alert("Pedido correctamente recibido")
-    confirmacion = "RUT cliente            : "+rut+"\nTelefono                : "+telefono+
-    "\nDirección               : "+direccion+"\nChocolate elegido: "+choco_opt+"\nDetalle                  : "+detalle
+    confirmacion = "RUT cliente               : "+rut+"\nTelefono                   : "+telefono+
+    "\nDirección                  : "+direccion+"\nChocolate elegido   : "+choco_opt+"\nDetalle                     : "+detalle+"\nMedio de reparto    : "+pedido
     alert(confirmacion)
 }
